@@ -1,0 +1,130 @@
+.content {
+	width: 1170px;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+	color: #2B2B2B;
+}
+.col-md-6.head h1 {
+	color: #DE1B1B;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
+.col-md-6.head span {
+	color: #2B2B2B;
+}
+ul.nav{
+	margin-left: 152px;
+	margin-top: 30px;
+}
+.nav li {
+	width: 228px;
+}
+
+.nav a {
+	-webkit-transition: color 0.6s ease-out 0.5s;
+     -moz-transition: color 0.6s ease-out 0.5s;
+     -o-transition: color 0.6s ease-out 0.5s;
+     transition: color 0.6s ease-out 0.5s;
+	color: #2B2B2B;
+
+}
+.nav a:hover {
+	color: #DE1B1B;
+}
+.col-md-6.head p {
+	font-size: 30px;
+	margin-left: 152px;
+	margin-top:30px;
+}
+.col-md-6.head p>strong {
+	display: block;
+}
+.home {
+	margin-top: 30px;
+}
+.home .log-in,
+.home .register,
+.home .find {
+	line-height: 100px;
+	background-color: #E9E581;
+	height: 120px;
+	float: left;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	color: #F6F6F6;
+	font-size: 25px;
+}
+
+.home .register {
+	background-color: #DE1B1B;
+}
+.home .find {
+	background-color: #2B2B2B; 
+}
+.home a {
+	height: 40px;
+	margin-top: 30px;
+	text-decoration: none;
+	color: #F6F6F6;
+}
+.form-inline {
+	line-height: 28px;
+	margin-top: 20px; 
+}
+.form-inline label {
+	display: block;
+	font-size: 25px;
+}
+.input-group .form-control:first-child{ 
+	width: 250px;
+	height: 40px;
+	font-size: 20px;
+	outline: none;
+}
+.input-group .form-control:first-child:focus{ 
+	border: 1px solid #DE1B1B;
+
+}
+
+.input-group-addon {
+	background-color: #DE1B1B;
+	border: 1px solid #DE1B1B; 
+}
+.input-group-addon:hover {
+	background-color: white;
+	border: 1px solid white; 
+	color: #DE1B1B !important; 
+	/*????*/
+}
+
+.glyphicon.glyphicon-search {
+	color: #F6F6F6;
+	font-size: 20px;
+}
+.categories {
+	background-color: #F6F6F6;
+	min-height: 30px;
+	margin-top: 20px;
+}
+.categories a {
+	font-size: 25px;
+	color: #2B2B2B;
+}
+.footer.container {
+	background-color: #E9E581;
+}
+.footer h2, h3 {
+	color: #F6F6F6;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
+.footer ul {
+	list-style: none;
+	margin-left: 120px;
+}
+.footer li {
+	float: left;
+	margin-left: 10px;
+}
