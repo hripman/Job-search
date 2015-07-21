@@ -1,0 +1,100 @@
+<form  id="profile">
+	<div class="form-group">
+	    <label for="inputFirstName">First Name</label>
+	    <input type="text" class="form-control" id="inputFirstName" ng-model="user.name" placeholder="First Name">
+	 </div>
+   <div class="form-group">
+	    <label for="inputLastName">Last Name</label>
+	    <input type="text" class="form-control" id="inputLastName" ng-model="user.lastName" placeholder="Last Name">
+   </div>
+   <div class="form-group">
+	    <label for="inputEmail">Email</label>
+	    <input type="email" class="form-control" id="inputEmail" ng-model="user.email" placeholder="Email">
+   </div>
+   <div class="form-group">
+	    <label for="inputPhone">Phone Number</label>
+	    <input type="tel" class="form-control" id="inputPhone" ng-model="user.phone"placeholder="Phone Number">
+   </div>
+   <div class="form-group">
+        <label for="phoneNumber">Show my phone number</label>
+	    <input type="checkbox" class="form-control" id="phoneNumber" ng-model="phoneNumber">
+   </div>
+   <button class="profileBtn">Next</button>
+</form>
+
+<form  id="education" class="invisible">
+	<div class="form-group">
+	    <label for="inputDegree">Degree</label>
+	    <input type="text" class="form-control" id="inputDegree" ng-model="user.degree" placeholder="Bachelor's, Master's">
+   </div>
+   <div class="form-group">
+	    <label for="inputStudy">Field of Study</label>
+	    <input type="text" class="form-control" id="inputStudy" ng-model="user.study" placeholder="Computer Science, Biology">
+   </div>
+    <div class="form-group">
+	    <label for="inputSchool">School</label>
+	    <input type="text" class="form-control" ng-model="user.school"id="inputSchool">
+   </div>
+    <div class="form-group">
+	    <label for="inputCity">City</label>
+	    <input type="text" class="form-control" ng-model="user.city" id="inputCity">
+   </div>
+   <div class="form-group">
+	    <label >Time Period</label>
+		<select ng-model="user.startYear" ng-init="user.startYear='Year:'">
+           <option>Year:</option>
+		   <option ng-repeat="i in range">{{i+1}}</option>
+ 		</select>  
+ 		to
+ 		<select ng-model="user.endYear" ng-init="user.endYear='Year:'">
+ 			<option>Year:</option>
+		    <option ng-repeat="i in range">{{i+1}}</option>
+ 		</select>  
+   </div>
+    <div class="form-group">
+	    <label for="inputSkills">Skills</label>
+	    <input type="text" class="form-control" ng-model="user.skills" id="inputSkills">
+   </div>
+   <button class="educationBtn" >Next</button>
+</form>
+
+<form  ng-submit="save()"  id="work" class="invisible">
+	<div class="form-group">
+	    <label for="inputJob">Job Title</label>
+	    <input type="text" class="form-control" ng-model="user.jobName"id="inputJob">
+  	</div>
+  	<div class="form-group">
+	    <label for="inputCompany">Company</label>
+	    <input type="text" class="form-control" ng-model="user.company" id="inputCompany">
+  	</div>
+  	<div class="form-group">
+	    <label for="inputCity">City</label>
+	    <input type="text" class="form-control" ng-model="user.workCity" id="inputCity">
+  	</div>
+  	<div class="form-group">
+	    <label >Time Period</label>
+		<div class="form-group">
+		    <input type="checkbox" name="lockYear" class="form-control" ng-model="lockYear">
+		    <label for="phoneCurrent">I currently work here</label>
+	   	</div>
+		<select ng-model="user.workStartYear" ng-init="user.workStartYear='Year:'">
+			<option>Year:</option>
+		    <option ng-repeat="i in range">{{i+1}}</option>
+		</select>  
+		to
+		<label id='Present' class="invisible">Present</label>
+		<select id="endDate" ng-model="user.workEndYear" ng-init="user.workEndYear='Year:'">
+			<option>Year:</option>
+		    <option ng-repeat="i in range">{{i+1}}</option>
+		</select>   
+	</div>
+	<div class="form-group">
+	    <label for="inputRespons">Responsibilities:</label>
+		<textarea class="form-control" id="inputRespons" ng-model="user.respons" rows="3"></textarea>
+	</div>
+	<div class="form-group">
+	    <label for="inputSkills">Skills used</label>
+		<textarea class="form-control" id="inputSkills" ng-model="user.usedSkills" rows="3"></textarea>
+	</div>
+   <button type="submit" >Post Resume</button>
+</form>

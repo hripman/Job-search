@@ -1,0 +1,12 @@
+<div class="search">
+	<input type="text" class="form-control" ng-model="searchJob" placeholder="Job title, skills, company">
+	<input type="text" class="form-control" ng-model="loc" placeholder="City">
+	<button ng-click="search()">Find</button>
+</div>
+<div class="result">
+	<ul>
+		<li ng-repeat="user in users"><a href="">{{user.name}} {{user.lastName}}</a>
+			<div>{{user.jobName}}-{{user.city}}</div>
+		</li>
+	</ul>
+</div>
