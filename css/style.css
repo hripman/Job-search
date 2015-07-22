@@ -3,6 +3,8 @@
 	margin: 0 auto;
 	background-color: #F6F6F6;
 	color: #2B2B2B;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+
 }
 
 .col-md-6.head h1 {
@@ -50,14 +52,24 @@ ul.nav{
 	background-color: #E9E581;
 	height: 120px;
 	float: left;
-	display: table-cell;
 	text-align: center;
-	vertical-align: middle;
 	text-transform: uppercase;
 	color: #F6F6F6;
 	font-size: 25px;
 }
+.home .postJob {
+	background-color: #2B2B2B;
+	height: 240px;
 
+}
+.home .postJob a {
+	color: #F6F6F6;
+	font-size: 25px;
+	text-align: center;
+	line-height: 220px;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
 .home .register {
 	background-color: #DE1B1B;
 }
@@ -70,6 +82,7 @@ ul.nav{
 	text-decoration: none;
 	color: #F6F6F6;
 }
+
 .form-inline {
 	line-height: 28px;
 	margin-top: 20px; 
@@ -93,17 +106,19 @@ ul.nav{
 	background-color: #DE1B1B;
 	border: 1px solid #DE1B1B; 
 }
-.input-group-addon:hover {
-	background-color: white;
-	border: 1px solid white; 
-	color: #DE1B1B !important; 
-	/*????*/
-}
-
 .glyphicon.glyphicon-search {
 	color: #F6F6F6;
 	font-size: 20px;
 }
+.input-group-addon:hover {
+	background-color: white;
+	border: 1px solid white; 
+	/*????*/
+}
+.input-group-addon:hover .glyphicon.glyphicon-search {
+	color: #DE1B1B;
+}
+
 .categories {
 	background-color: #F6F6F6;
 	min-height: 30px;
@@ -115,9 +130,10 @@ ul.nav{
 }
 .footer.container {
 	background-color: #E9E581;
+	height: 150px;
 }
 .footer h2, h3 {
-	color: #F6F6F6;
+	color: #2B2B2B;
 	text-transform: uppercase;
 	margin-left: 160px;
 }
@@ -197,7 +213,8 @@ ul.nav{
 	padding-top: 30px;
 	background-color:white;
 	border-bottom: 1px solid rgb(220,220,220);
-	margin-bottom: 35px;
+	margin-bottom: 35px; 
+	margin-left: 10px;	
 }
 .search input {
 	width: 500px;
@@ -209,12 +226,16 @@ ul.nav{
 	border:1px solid #DE1B1B;
 }
 .search button {
-	width: 150px;
-	height: 50px;
+	width: 140px;
+	height: 45px;
 	background-color: #DE1B1B;
 	color: white;
 	font-size: 20px;
 	border-radius: 10px;
+}
+.result {
+	min-height: 80px;
+	margin-left: 10px;
 }
 .result ul {
 	list-style: none;
@@ -222,4 +243,11 @@ ul.nav{
 .result li {
 	color: #2B2B2B;
 	font-size: 25px;
+}
+.result div {
+	color: #2B2B2B;
+	font-size: 20px;
+}
+.alert-danger {
+	width: 800px;
 }

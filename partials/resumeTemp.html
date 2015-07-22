@@ -1,15 +1,27 @@
-<form  id="profile">
+<form  name="profile" id="profile" class="profileForm">
 	<div class="form-group">
 	    <label for="inputFirstName">First Name</label>
-	    <input type="text" class="form-control" id="inputFirstName" ng-model="user.name" placeholder="First Name">
+	    <input name="name" type="text" class="form-control" id="inputFirstName" ng-model="user.name" placeholder="First Name" required>
+	     <div class="alert alert-danger"
+		    ng-show="profile.name.$error.required && profile.name.$dirty">
+		    Please enter your  name!
+		</div>
 	 </div>
    <div class="form-group">
 	    <label for="inputLastName">Last Name</label>
-	    <input type="text" class="form-control" id="inputLastName" ng-model="user.lastName" placeholder="Last Name">
+	    <input name="lastName" type="text" class="form-control" id="inputLastName" ng-model="user.lastName" placeholder="Last Name" required>
+	    <div class="alert alert-danger"
+		    ng-show="profile.lastName.$error.required && profile.lastName.$dirty">
+		    Please enter your last name!
+		</div>
    </div>
    <div class="form-group">
 	    <label for="inputEmail">Email</label>
-	    <input type="email" class="form-control" id="inputEmail" ng-model="user.email" placeholder="Email">
+	    <input name="email" type="email" class="form-control" id="inputEmail" ng-model="user.email" placeholder="Email" required>
+	    <div class="alert alert-danger"
+		    ng-show="profile.email.$error.required && profile.email.$dirty">
+		    Please enter your email!
+		</div>
    </div>
    <div class="form-group">
 	    <label for="inputPhone">Phone Number</label>
@@ -17,12 +29,12 @@
    </div>
    <div class="form-group">
         <label for="phoneNumber">Show my phone number</label>
-	    <input type="checkbox" class="form-control" id="phoneNumber" ng-model="phoneNumber">
+	    <input type="checkbox" ng-checked="privateNumber()" class="form-control" id="phoneNumber" ng-model="phoneNumber">
    </div>
-   <button class="profileBtn">Next</button>
+   <button type="submit" class="profileBtn">Next</button>
 </form>
 
-<form  id="education" class="invisible">
+<form name="education" id="education" class="invisible educationForm">
 	<div class="form-group">
 	    <label for="inputDegree">Degree</label>
 	    <input type="text" class="form-control" id="inputDegree" ng-model="user.degree" placeholder="Bachelor's, Master's">
@@ -36,8 +48,20 @@
 	    <input type="text" class="form-control" ng-model="user.school"id="inputSchool">
    </div>
     <div class="form-group">
+	    <label for="inputCity">Country</label>
+	    <input name="country" type="text" class="form-control" ng-model="user.country" id="inputCity" required>
+	     <div class="alert alert-danger"
+		    ng-show="education.country.$error.required && education.country.$dirty">
+		    Please enter your country!
+		</div>
+   </div>
+    <div class="form-group">
 	    <label for="inputCity">City</label>
-	    <input type="text" class="form-control" ng-model="user.city" id="inputCity">
+	    <input name="city" type="text" class="form-control" ng-model="user.city" id="inputCity" required>
+	    <div class="alert alert-danger"
+		    ng-show="education.city.$error.required && education.city.$dirty">
+		    Please enter your city!
+		</div>
    </div>
    <div class="form-group">
 	    <label >Time Period</label>
@@ -53,15 +77,23 @@
    </div>
     <div class="form-group">
 	    <label for="inputSkills">Skills</label>
-	    <input type="text" class="form-control" ng-model="user.skills" id="inputSkills">
+	    <input name="skills" type="text" class="form-control" ng-model="user.skills" id="inputSkills" required>
+	    <div class="alert alert-danger"
+		    ng-show="education.skills.$error.required && education.skills.$dirty">
+		    Please enter your skills!
+		</div>
    </div>
-   <button class="educationBtn" >Next</button>
+   <button type="submit" class="educationBtn" >Next</button>
 </form>
 
-<form  ng-submit="save()"  id="work" class="invisible">
+<form  name = "work" ng-submit="save()"  id="work" class="invisible">
 	<div class="form-group">
 	    <label for="inputJob">Job Title</label>
-	    <input type="text" class="form-control" ng-model="user.jobName"id="inputJob">
+	    <input name="job" type="text" class="form-control" ng-model="user.jobName"id="inputJob" required>
+	    <div class="alert alert-danger"
+		    ng-show="work.job.$error.required && work.job.$dirty">
+		    Please enter your job name!
+		</div>
   	</div>
   	<div class="form-group">
 	    <label for="inputCompany">Company</label>
@@ -74,7 +106,7 @@
   	<div class="form-group">
 	    <label >Time Period</label>
 		<div class="form-group">
-		    <input type="checkbox" name="lockYear" class="form-control" ng-model="lockYear">
+		    <input type="checkbox" name="lockYear" class="form-control" ng-model="lockYear" >
 		    <label for="phoneCurrent">I currently work here</label>
 	   	</div>
 		<select ng-model="user.workStartYear" ng-init="user.workStartYear='Year:'">

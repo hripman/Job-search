@@ -5,6 +5,7 @@ angular.module('myApp.services',[])
 
 		resumeAPI.addResume = function(resume,userId) {
 			resumeAPI.resumesList[userId] = resume;
+			console.log(resume);
 		};
 
 		resumeAPI.search = function(work, loc) {
@@ -16,7 +17,7 @@ angular.module('myApp.services',[])
 						 || work == list[key]['company'] 
 						 || (list[key]['skills']&& list[key]['skills'].indexOf(work)!=-1 )) {
 						if(loc) {
-							if(loc == list[key]['city'])
+							if(loc == list[key]['city'] || loc == list[key]['country'] )
 								userList.push(list[key]);
 							else
 								continue;

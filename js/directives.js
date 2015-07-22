@@ -29,14 +29,14 @@ angular.module("myApp.directives",[]).
 					}
 				});
 
-				element.bind("click", function(e) {
-					if($(e.target).hasClass('profileBtn')) {
+				element.bind("submit", function(e) {
+					if($(e.target).hasClass('profileForm')) {
 						profile.addClass('invisible');	
 						education.removeClass('invisible');
 						profLi.removeClass('activeBorder');
 						educLi.addClass('activeBorder');
 					}
-					if($(e.target).hasClass('educationBtn')) {
+					if($(e.target).hasClass('educationForm')) {
 						education.addClass('invisible');	
 						work.removeClass('invisible');
 						educLi.removeClass('activeBorder');

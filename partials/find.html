@@ -1,12 +1,19 @@
 <div class="search">
-	<input type="text" class="form-control" ng-model="searchJob" placeholder="Job title, skills, company">
-	<input type="text" class="form-control" ng-model="loc" placeholder="City">
-	<button ng-click="search()">Find</button>
+	<form name="search" ng-submit="searchResumes()"> 
+		<input name="job" type="text" class="form-control" ng-model="searchJob" placeholder="Job title, skills, company" required>
+		<input name="loc" type="text" class="form-control" ng-model="loc" placeholder="City, Country">
+		<button type ="submit">Find</button>
+	<form>
 </div>
 <div class="result">
 	<ul>
 		<li ng-repeat="user in users"><a href="">{{user.name}} {{user.lastName}}</a>
-			<div>{{user.jobName}}-{{user.city}}</div>
+			<div>Live in {{user.city}}</div>
+			<div>{{user.jobName}}</div>
+			<div>SKills {{user.skills}}</div>
 		</li>
 	</ul>
+	<div ng-show="!users.length && flag ">
+		Search result are 0. Try different job or location	
+	</div>
 </div>

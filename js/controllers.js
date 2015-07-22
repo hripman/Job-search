@@ -11,10 +11,19 @@ angular.module("myApp.controllers",[]).
 		$scope.save = function() {
 			resumeService.addResume($scope.user,'1');
 		}
+		$scope.privateNumber = function() {
+			$scope.user.number = "private"; //???
+		}
 	}).
 	controller('findController', function($scope, resumeService) {
 		$scope.users = [];
-		$scope.search = function() {
+		$scope.flag=false;
+		$scope.searchResumes = function() {
+			$scope.flag = true;
 			$scope.users = resumeService.search($scope.searchJob,$scope.loc);
-		}
+		};
+		$scope.$watch('[searchJob, loc]', function(newVal) {
+			$scope.flag = false
+		})
+
 	})
