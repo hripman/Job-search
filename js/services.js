@@ -1,34 +1,68 @@
 angular.module('myApp.services',[])
-	.factory('resumeService',function() {
-		var resumeAPI = {};
-		resumeAPI.resumesList = {};
-
-		resumeAPI.addResume = function(resume,userId) {
-			resumeAPI.resumesList[userId] = resume;
-			console.log(resume);
-		};
-
-		resumeAPI.search = function(work, loc) {
-			var userList = [];
-			var list = resumeAPI.resumesList;
-
-			for(var key in list) {
-					if(work == list[key]['jobName'] 
-						 || work == list[key]['company'] 
-						 || (list[key]['skills']&& list[key]['skills'].indexOf(work)!=-1 )) {
-						if(loc) {
-							if(loc == list[key]['city'] || loc == list[key]['country'] )
-								userList.push(list[key]);
-							else
-								continue;
-						}
-						else
-							userList.push(list[key]);
-					}
+	.factory('resumeData',function() {
+		this.data = [
+			{
+				userId:1,
+				city: "Erevan",
+				company: "macadamian",
+				country: "Armenia",
+				degree: "Bachelor's",
+				email: "hrips12@mail.ru",
+				endYear: "2012",
+				jobName: "js developer",
+				lastName: "Manukyan",
+				name: "Hripsime",
+				phone: "098911915",
+				phoneNumberPrivate: true,
+				respons: "sdsdass",
+				school: "133",
+				skills: "C++, javascript, html, css",
+				startYear: "2001",
+				study: "Computer Scince",
+				usedSkills: "sdasdas",
+				workCity: "Yerevan",
+				workEndYear: "2016",
+				workStartYear: "2015"
 			}
-			return userList;
+		];
 
+		this.getAllResumes = function() {
+			return this.data;
+		}
+		this.findOne = function(userId) {
+			var data = $.grep(this.getAllResumes(), function(el, index) {
+				return(el.userId == userId);
+			});
+			return data;
+		}
+		this.find = function(options) {
+			var data = $.grep(this.getAllResumes(), function(el, index) {
+				var flag = true;
+				$.each(options, function(key,value) {
+					if(el[key] != value) {
+						flag = false;
+						return false
+					}
+					return flag;
+				})
+
+			});
+		}
+		return this;
+}).
+	factory('resumeService', function ($http) {
+		var resumeAPI = {
+			getAll: function () {
+				return $http.get('/resumes');
+			}
+		}
+		var resumeAPI = {
+			search: function (option) {
+
+				return $http.get('/resumes/search/');
+			}
 		}
 		return resumeAPI;
-	})
+	})	
+
 	
