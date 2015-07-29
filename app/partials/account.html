@@ -1,0 +1,42 @@
+<div class="account">
+	<h2>{{user.name}}  {{user.lastName}}</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div flow-init="{target: '/upload'}"
+			     flow-files-submitted="$flow.upload()"
+			     flow-file-success="$file.msg = $message" flow-name="obj.flow" class="upload">
+				  <input type="file" flow-btn  ng-hide="$flow.files.length"/>
+				  <table>
+				    <tr ng-repeat="file in $flow.files">
+				        <div class="upload-img" >
+				   			<img flow-img="$flow.files[0]" class="image-size" />
+				        </div>
+				    </tr>
+				  </table>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h2>Your Profile</h2>
+				<div ng-hide="register">
+					<div>Name - {{user.name}}</div>
+					<div>Last Name - {{user.lastName}}</div>
+					<div>Email - {{user.email}}</div>
+					<a href="" ng-click="viewRegister()">Edit Profile</a>
+				</div>
+				<form ng-show="register" ng-submit="save()">
+					<register-form user="temp" ></register-form>
+					<button type="submit">Save</button>
+				</form>
+			</div>
+			<div class="col-md-4 profile-resume" >
+				<h2>Your Resume</h2>
+				<resume-view out="false" user="resume" ng-hide="noResume"></resume-view>
+				<div ng-show="noResume">
+					 You still don't have  resume. You can post it <a href="#/resume">here</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

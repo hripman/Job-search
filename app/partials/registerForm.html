@@ -1,0 +1,36 @@
+<div class="form-group">
+	<label for="inputName">Name</label>
+    <input name="name" type="text" class="form-control" id="inputName" ng-model="user.name" max="20" placeholder="Name" required>
+     <div class="alert alert-danger" ng-show="form.name.$error.required && form.name.$dirty">
+	    Please enter your name!
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputlastName">Last Name</label>
+    <input name="lastName" type="text" class="form-control" id="inputlastName" ng-model="user.lastName" max="20" placeholder="Last Name" required>
+     <div class="alert alert-danger" ng-show="form.lastName.$error.required && form.lastName.$dirty">
+	    Please enter your last name!
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputemail">Email</label>
+    <input name="email" type="email" class="form-control" id="inputemail" ng-model="user.email"  placeholder="Email" required>
+     <div class="alert alert-danger" ng-show="form.email.$error.required && form.email.$dirty">
+	    Please enter your email!
+	</div>
+	 <div class="alert alert-danger" ng-show="usedEmail">
+	    The account with that email already exist.
+	</div>
+</div>
+<div class="form-group">
+	<password  pass="user.password" easy="easy" medium="medium" strong="strong" min="min"></password>	
+     <div class="alert alert-danger" ng-show="form.password.$error.required && form.password.$dirty">
+	    Please enter your password!
+	</div>
+	<div class="alert alert-danger" ng-show="easyPass">
+	    This password is too easy, please choose another.
+	</div>
+	<div class="alert alert-danger" ng-show="shortPass">
+	    This password is too short, please choose another.
+	</div>
+</div>

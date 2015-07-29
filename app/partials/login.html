@@ -1,0 +1,34 @@
+<div class="container login-content">
+	<div class="row">
+		<div class="col-md-6 register-field">
+			<h2>Login or create your account</h2>
+			<button ng-click='createAccount("/account/register")'>Create an account </button>
+		</div>
+		<div class="col-md-6">
+			<div class="login-form">
+				<strong>Registered users</strong>
+				<form name="login" ng-submit="logIn()">
+					<div class="form-group">
+						<label for="inputEmail">Email</label>
+					    <input name="loginEmail" type="email" class="form-control" id="inputEmail" ng-model="credentials.email" placeholder="Email" required>
+					     <div class="alert alert-danger" ng-show="login.loginEmail.$error.required && login.loginEmail.$dirty">
+						    Please enter your email!
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword">Password</label>
+					    <input name="password" type="password" class="form-control" id="inputPassword" ng-model="credentials.password" placeholder="Password" required>
+					     <div class="alert alert-danger"
+						    ng-show="login.password.$error.required && login.password.$dirty">
+						    Please enter your password!
+						</div>
+					</div>
+					<div class="alert alert-danger" ng-show="error">
+						Incorrect username and/or password
+					</div>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

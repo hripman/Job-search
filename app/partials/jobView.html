@@ -1,0 +1,11 @@
+<div class="job">
+	<ul>
+		<li ng-repeat='employer in jobs'>
+			<job-view employer="employer"></job-view>
+		</li>
+	</ul>
+	<div ng-show="!jobs.length ">
+		Search result is 0. Try find another job.
+	</div>
+</div>
+

@@ -1,0 +1,480 @@
+.content {
+	width: 1170px;
+	margin: 0 auto;
+	color: black;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	font-size: 20px;
+
+}
+.partials {
+	background-color: white;
+	min-height: 400px;
+
+}
+.col-md-6.head h1 {
+	color: #E24F61;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
+.row.a {
+	margin: none !important;
+}
+.col-md-6.head span {
+	color: #354252;
+}
+ul.nav{
+	margin-left: 152px;
+	margin-top: 30px;
+}
+.nav li {
+	width: 228px;
+}
+
+.nav a {
+	font-size: 20px;
+	color: #354252;
+
+}
+.nav a:hover {
+	color: #E24F61;
+}
+.col-md-6.head p {
+	font-size: 30px;
+	margin-left: 152px;
+	margin-top:30px;
+}
+.col-md-6.head p>strong {
+	display: block;
+}
+.log-out {
+	float: right;
+	margin-top:5px;
+	margin-right: 15px;
+}
+.peoplePic {
+	width:400px;
+}
+.alert-danger {
+	width: 800px;
+}
+.header {
+	height: 400px;
+}
+.header:before {
+	position: absolute;
+    height: inherit;
+    width: inherit;
+	background: url('../img/background.jpg');
+   	opacity: 0.8;
+	-webkit-filter: blur(6px);
+	margin-left: -22px;
+    margin-top: 20px;
+}
+/*--------------------------home------------------------------------------*/
+.home {
+	margin-top: 30px;
+}
+.home .log-in,
+.home .register,
+.home .find {
+	line-height: 100px;
+	background-color: #8396A7;
+	height: 120px;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	color: #F6F6F6;
+	font-size: 25px;
+}
+.home .postJob {
+	background-color: #354252;
+	height: 240px;
+
+}
+.home .postJob a {
+	color: #F6F6F6;
+	font-size: 25px;
+	text-align: center;
+	line-height: 220px;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
+.home .register {
+	background-color: #E24F61;
+}
+.home .find {
+	background-color: #354252; 
+}
+.home a {
+	height: 40px;
+	margin-top: 30px;
+	text-decoration: none;
+	color: #F6F6F6;
+}
+
+.form-inline {
+	line-height: 28px;
+	margin-top: 20px; 
+}
+.form-inline label {
+	display: block;
+	font-size: 25px;
+}
+.input-group .form-control:first-child{ 
+	width: 250px;
+	height: 40px;
+	font-size: 20px;
+	outline: none;
+}
+.input-group .form-control:first-child:focus{ 
+	border: 1px solid #E24F61;
+
+}
+
+.input-group-addon {
+	background-color: #E24F61;
+	border: 1px solid #E24F61; 
+}
+.glyphicon.glyphicon-search {
+	color: #F6F6F6;
+	font-size: 20px;
+}
+.input-group-addon:hover {
+	background-color: white;
+	border: 1px solid white; 
+	/*????*/
+}
+.input-group-addon:hover .glyphicon.glyphicon-search {
+	color: #E24F61;
+}
+
+.categories {
+	background-color: #F6F6F6;
+	min-height: 30px;
+	margin-top: 20px;
+}
+.categories a {
+	font-size: 25px;
+	color: #354252;
+}
+
+/*----------------------------------footer----------------------------------*/
+.footer.container {
+	background-color: #8396A7;
+	height: 150px;
+}
+.footer h2, h3 {
+	color: #354252;
+	text-transform: uppercase;
+	margin-left: 160px;
+}
+.footer ul {
+	list-style: none;
+	margin-left: 120px;
+}
+.footer li {
+	float: left;
+	margin-left: 10px;
+}
+.invisible {
+	display: none;
+}
+
+/*--------------------------------resume----------------------------------------*/
+.resumeContainer {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.resumeContainer div:first-child {
+	padding-top: 10px;
+}
+.resumeContainer ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+}
+.resumeContainer li {
+	float: left;
+	font-size: 25px;
+	margin-left: 40px;
+	width: 200px;
+	text-align: center;
+}
+.border {
+	border:1px solid rgb(220,220,220);
+	width: 900px;
+	background-color: #BDC7C9;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-top: 20px;
+
+}
+.border  input {
+	width: 800px;
+	height: 50px;
+	font-size: 20px;
+}
+.border input:focus {
+	border:1px solid #E24F61;
+}
+.border textarea.form-control {
+	width: 800px;
+	font-size: 20px;
+}
+.border textarea.form-control:focus {
+	border:1px solid #E24F61;
+}
+.border button {
+	width: 150px;
+	height: 50px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.activeBorder {
+	border: 1px solid #E24F61;
+	background-color: #E24F61;
+	border-radius: 10px;
+	color: white;
+}
+.border input[type="checkbox"] {
+	width: 30px;
+	height: 25px;
+}
+.view {
+	margin-left: 30px;
+	font-size: 25px;
+}
+.view div {
+	margin-top:5px;
+}
+
+/*---------------------------find---------------------------------*/
+.search {
+	height: 100px;
+	padding-top: 30px;
+	background-color:white;
+	border-bottom: 1px solid rgb(220,220,220);
+	margin-bottom: 35px; 
+	margin-left: 10px;	
+}
+.search input {
+	width: 500px;
+	display: inline-block;
+	font-size: 20px;
+	height: 40px;
+}
+.search input:focus {
+	border:1px solid #E24F61;
+}
+.search button {
+	width: 140px;
+	height: 45px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.result {
+	min-height: 80px;
+	margin-left: 10px;
+}
+.result ul {
+	list-style: none;
+}
+.result li {
+	color: #354252;
+	font-size: 25px;
+}
+.result div {
+	color: #354252;
+	font-size: 20px;
+}
+
+/*-----------------------------login------------------------------------*/
+.login-content {
+	padding-top: 80px;
+}
+.login-form {
+	width: 550px;
+	border:1px solid rgb(220,220,220);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+
+}
+.login-form {
+	background-color: #BDC7C9;
+}
+.login-form input {
+	width: 400px;
+	height: 50px;
+	font-size: 20px;
+
+}
+.login-form input:focus {
+	border:1px solid #E24F61;
+}
+.login-content button {
+	width: 200px;
+	height: 45px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.login-form .alert-danger {
+	width: 400px;
+}
+.register-field {
+	margin-top:60px;
+}
+.register-field h2{
+	text-align:  center;
+}
+.register-field button {
+	margin-top:20px;
+	margin-left: 150px;
+}
+/*-----------------------------------register---------------------*/
+.register-form {
+	width: 900px;
+	margin: 0 auto;
+	border:1px solid rgb(220,220,220);
+	padding-top:20px;
+	background-color: #BDC7C9;
+	padding-left:20px;
+	margin-top: 90px;
+	
+}
+.register-form input {
+	width: 800px;
+	height: 50px;
+	font-size: 20px;	
+}
+.register-form input:focus {
+	border:1px solid #E24F61;
+}
+.register-form button {
+	width: 140px;
+	height: 45px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+/*---------------------------job---------------------------------*/
+.employer-job {
+	width: 900px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.employer-job div.view {
+	font-size: 25px;
+	margin-left: 0;
+}
+.employer-job  input {
+	width: 800px;
+	height: 50px;
+	font-size: 20px;
+}
+.employer-job input:focus {
+	border:1px solid #E24F61;
+}
+.employer-job textarea.form-control {
+	width: 800px;
+	font-size: 20px;
+}
+.employer-job textarea.form-control:focus {
+	border:1px solid #E24F61;
+}
+.employer-job select {
+	width: 150px;
+	height: 49px;
+}
+.employer-job select:focus {
+	outline: none;
+	border:1px solid #E24F61;
+}
+.employer-job button {
+	width: 150px;
+	height: 50px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.employer-job input[type="checkbox"] {
+	width: 30px;
+	height: 22px;
+}
+.exp-input.form-control {
+	width: 600px;
+	margin-top: 10px;
+	display: inline-block;
+
+}
+/*-------------------------account----------------------------*/
+.account {
+	height: 720px;
+	padding-top: 20px;
+	padding-left: 20px;
+	margin-top: 40px;
+	font-size: 25px;
+
+}
+.account  input {
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+.account button {
+	width: 150px;
+	height: 50px;
+	background-color: #E24F61;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.account .upload-img {
+	margin-top: 20px;
+}
+.image-size {
+	width: 200px;
+	height: 200px;
+}
+.account h2 {
+	margin-bottom: 30px;
+	color:#E24F61;
+}
+.upload {
+	margin-top: 20px;
+}
+.profile-resume {
+	height: 600px;
+    width: 350px;
+    overflow: auto
+}
+/*--------------------jobView----------------------------*/
+.job {
+	padding-top: 40px;
+	padding-left: 20px;
+	font-size: 25px;
+}
+.job strong {
+	color:#354252;
+}
+.job ul {
+	list-style: none;
+}
+.job li {
+	margin-top:20px;
+	color: #354252;
+	font-size: 25px;
+}

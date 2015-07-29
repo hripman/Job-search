@@ -1,0 +1,19 @@
+<div><strong>{{user.name}} {{user.lastName}}</strong></div>
+<div>{{user.email}} </div>
+<div ng-hide="out=='true' && !user.phoneNumberPublic">{{user.phone}} <span ng-hide="user.phoneNumberPublic"class="glyphicon glyphicon-lock"></span></div>
+<div>Live in {{user.country}}, {{user.city}}</div>
+
+<div><strong>EDUCATION</strong></div>
+<div ng-show="user.degree">Degree {{user.degree}}</div>
+<div ng-show="user.study">Field of Study {{user.study}}</div>
+<div ng-show="user.scholl">Scholl {{user.school}}</div>
+<div ng-show="user.startYear != 'Year:' && user.endYear !='Year:'">{{user.startYear}} to {{user.endYear}} </div>
+<div>Skills {{user.skills}}</div>
+<div ng-show="user.jobName" >
+	<div><strong>WORK EXPERIENCE</strong></div>
+	<div>{{user.jobName}} in {{user.company}}, {{user.city}}</div>
+	<div ng-show="user.workStartYear!='Year:'">{{user.workStartYear}} to 
+		<span ng-hide="user.lockYear">{{user.workEndYear}}</span> <span ng-show="user.lockYear">Present</span></div>
+	<div ng-show="user.respons">Responsibilities: <div>{{user.respons}}</div></div>
+	<div ng-show="user.usedSkills">Skills used: <div>{{user.usedSkills}}</div> 
+</div>

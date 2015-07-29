@@ -1,0 +1,104 @@
+<div class="employer-job">
+	<div><h2>Post a Job</h2></div>
+	<div class="border">
+		<form  name="job"class="profileForm" ng-submit="save()" ng-hide="view">
+			<div class="form-group">
+			    <label for="inputCompany">Company</label>
+			    <input name="company" type="text" class="form-control" id="inputCompany" ng-model="employer.company" placeholder="Company" required>
+			     <div class="alert alert-danger"
+				    ng-show="job.company.$error.required && job.company.$dirty">
+				    Company is required!
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputCompnayi">Job Title</label>
+			    <input name="jobTitle" type="text" class="form-control" id="inputJobTitle" ng-model="employer.jobTitle" placeholder="Job Title" required>
+			     <div class="alert alert-danger"
+				    ng-show="job.jobTitle.$error.required && job.jobTitle.$dirty">
+				    Job Title  is required!
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputDescription">Job Description</label>
+				<textarea name="description" class="form-control" id="inputDescription" ng-model="employer.description" rows="3" ng-minlength='30' required></textarea>
+				<div class="alert alert-danger" ng-show="minLength">
+					Job Description must be at least 30 characters
+				</div>
+				<div class="alert alert-danger"
+				    ng-show="job.description.$error.required && job.description.$dirty">
+				    Job Description is required!
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputCountry">Country</label>
+				<input name="country" type="text" class="form-control" id="inputCountry" ng-model="employer.country" placeholder="Country" required>
+				<div class="alert alert-danger"
+				    ng-show="job.country.$error.required && job.country.$dirty">
+				    Country is required!
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputCity">City</label>
+				<input name="city" type="text" class="form-control" id="inputCity" ng-model="employer.city" placeholder="City" required>
+				<div class="alert alert-danger"
+				    ng-show="job.city.$error.required && job.city.$dirty">
+				    City is required!
+				</div>
+			</div>
+			<label><strong>Job requirements</strong></label>
+			<div class="form-group">
+			    <label for="inputExperience">Experience</label>
+			    <div> <input type="checkbox" ng-model="employer.notRequiredExp"> <label>Not Required</label> </div>
+				<input name="experience" type="text" class="form-control exp-input" id="inputExperience" ng-model="employer.experience" placeholder="Experience" ng-hide="employer.notRequiredExp"ng-required="!employer.notRequiredExp">
+				<select ng-model="employer.expYears" ng-hide="employer.notRequiredExp" ng-init="employer.expYears='1 Year'">
+					<option>1 Year</option>
+					<option>2 Year</option>
+					<option>3 Year</option>
+					<option>4 Year</option>
+					<option>5 Year</option>
+				</select>
+				<div class="alert alert-danger"
+				    ng-show="job.experience.$error.required && job.experience.$dirty">
+				    Job experience is required!
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Education Level</label>	
+				<div>
+					<select ng-model="employer.educationDegree" ng-init="employer.educationDegree='High School'">
+					<option>High School</option>
+					<option>Bachelor's</option>
+					<option>Master's</option>
+					<option>Doctorate</option>
+				</select>
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputLanguages">Required languages</label>
+				<input type="text" class="form-control" id="inputLangiages" ng-model="employer.languages" placeholder="Languages">
+			</div>
+			<div class="form-group">
+			    <label for="inputEmail">Email</label>
+				<input name="email" type="email" class="form-control" id="inputEmail" ng-model="employer.email" placeholder="Email" required>
+				<div class="alert alert-danger"
+				    ng-show="job.email.$error.required && job.email.$dirty">
+				    Email is required!
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="inputNumber">Contact Number</label>
+				<input name="number" type="number" class="form-control" id="inputNumber" ng-model="employer.number" required>
+				<div class="alert alert-danger"
+				    ng-show="job.number.$error.required && job.number.$dirty">
+				    Contact Number is required!
+				</div>
+			</div>
+			<button type="submit">Continue</button>
+		</form>
+	</div>
+	<div ng-show="view" class="view">
+		<job-view employer="employer"></job-view>	
+		<button ng-click="postJob()">Post</button>
+		<a href="" ng-click="edit()">Edit Job  <span class="glyphicon glyphicon-pencil"></span></a>
+	</div>
+</div>
